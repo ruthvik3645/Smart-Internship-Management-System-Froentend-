@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Figtree:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #0f2a24;
+  --color-ink-soft: #1d453b;
+  --color-paper: #f3f6f2;
+  --color-rule: #d3dcd4;
+  --color-hl: #ffd43b;
+  --color-pine: #1f7a5c;
+  --color-brick: #bf3328;
+  --color-sky: #2457c5;
+  --color-wait: #9a5b06;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-sky);
+  outline-offset: 2px;
+}
+
+/* Logbook paper: one ruled line every 28px. */
+.ruled {
+  background-image: repeating-linear-gradient(to bottom, transparent 0 27px, var(--color-rule) 27px 28px);
+  line-height: 28px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
