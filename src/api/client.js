@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const defaultBaseUrl = typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1'
-  ? 'https://smart-internship-management-system-backend.onrender.com'
+  ? 'https://smart-internship-management-system-8pkm.onrender.com'
   : 'http://localhost:8080';
 
 const api = axios.create({ baseURL: import.meta.env.VITE_API_URL || defaultBaseUrl });
